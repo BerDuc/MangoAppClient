@@ -37,7 +37,7 @@ class App extends Component {
   }
 
   saveChanges(){
-    const url = 'https://localhost:5001/api/Utilisateurs/'+this.state.utilisateur.id;
+    const url = 'https://localhost:5001/api/Utilisateurs/'+this.state.utilisateur.GetId;
    
     const axiosConfig = {
         headers : {

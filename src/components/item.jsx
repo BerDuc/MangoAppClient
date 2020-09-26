@@ -4,10 +4,10 @@ export function Item(itemObj, key){
     let item = itemObj.item; 
 return <tr key={key}>
         <td>
-            {item.titre}
+            {item.getTitre}
         </td>
         <td>
-            {item.description}
+            {item.getDescription}
         </td>
     </tr>
 }

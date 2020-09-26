@@ -1,34 +1,34 @@
 export class Utilisateur {
 
-    constructor(nom='', mdp='', items=[], id=0){
-        this._id = id;
-        this._nom = nom;
-        this._mdp = mdp;
-        this._items = items; 
+    constructor(_nom='', _mdp='', _items=[], _id=0){
+        this.id = _id;
+        this.identifiant = _nom;
+        this.mdp = _mdp;
+        this.items = _items; 
     }
-    get id(){
-        return this._id;
+    get GetId(){
+        return this.id;
     }
-    set id(val){
-        this._id = val;
+    set SetId(val){
+        this.id = val;
     }
-    get nom(){
-        return this._nom;
+    get GetNom(){
+        return this.identifiant;
     }
-    set nom(val){
-        this._nom = val;
+    set SetNom(val){
+        this.identifiant = val;
     }
-    get mdp(){
-        return this._mdp;
+    get GetMdp(){
+        return this.mdp;
     }
-    set mdp(val){
-        this._mdp = val;
+    set SetMdp(val){
+        this.mdp = val;
     }
-    get items(){
-        return this._items;
+    get GetItems(){
+        return this.items;
     }
-    set items(val){
-        this._items = val; 
+    set SetItems(val){
+        this.items = val; 
     }
 }
 

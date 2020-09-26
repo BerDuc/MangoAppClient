@@ -1,21 +1,28 @@
 export class Item {
 
-    constructor(titre, description){
-        this._titre = titre;
-        this._description = description;
+    constructor(_titre, _description, _id=0){
+        this.id = _id;
+        this.titre = _titre;
+        this.description = _description;
     }
 
-    get titre(){
-        return this._titre;
+    get getId(){
+        return this.id;
     }
-    set titre(val){
-        this._titre = val;
+    set setId(val){
+        this.id = val;
     }
-    get description(){
-        return this._description;
+    get getTitre(){
+        return this.titre;
     }
-    set description(val){
-        this._description = val;
+    set setTitre(val){
+        this.titre = val;
+    }
+    get getDescription(){
+        return this.description;
+    }
+    set setDescription(val){
+        this.description = val;
     }
 }
 

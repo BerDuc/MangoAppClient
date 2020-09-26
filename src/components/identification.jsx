@@ -1,6 +1,7 @@
 import React, {Component} from 'react'; 
 import Utilisateur from './../model/utilisateur';
 import axios from 'axios';
+import {Item} from './../model/item'; 
 
 class Identfication extends Component {
 
@@ -35,7 +36,11 @@ class Identfication extends Component {
         }
 
     handleData(data){
-        let utilisateur = new Utilisateur(data.identifiant, data.mdp, data.items, data.id); 
+        let itemArray = [];
+        data.items.forEach( item => {
+            itemArray.push(new Item(item.titre, item.description, item.id));
+        })
+        let utilisateur = new Utilisateur(data.identifiant, data.mdp, itemArray, data.id); 
         this.props.goToList(utilisateur); 
     }
 
