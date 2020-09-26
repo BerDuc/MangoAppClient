@@ -37,20 +37,15 @@ class App extends Component {
   }
 
   saveChanges(){
-    console.log("saveChanges"); 
     const url = 'https://localhost:5001/api/Utilisateurs/'+this.state.utilisateur.id;
-    console.log("url= "+url); 
-    let formData = new FormData();
-    formData.append('utilisateur', this.state.utilisateur); 
+   
     const axiosConfig = {
         headers : {
             'content-type': 'application/json',
         },
-        data: formData
+   
     };
-    console.log(axiosConfig); 
-    console.log(formData); 
-    axios.put(url, formData)
+    axios.put(url, this.state.utilisateur, axiosConfig)
         .then( res => console.log(res))
         .catch( err => console.log("code de l'erreur: "+err));
   }
